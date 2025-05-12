@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -22,21 +23,44 @@
                 <p class="know-text">You <span style="font-style: italic;">know</span> you want to.</p>
             </div>
             </p>
-            <form action="sign-up" method="post">
+            <form action="sign-up" method="post" class="form-card">
                 <legend>Let's do this!</legend>
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" for="first-name">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" for="last-name">
-                <label for="email">Email</label>
-                <input type="email" id="email" for="email">
-                <label for="phone-number">Phone Number</label>
-                <input type="number" id="phone-number" for="phone-number">
-                <label for="password">Password</label>
-                <input type="password" id="password" for="password">
-                <label for="password">Password</label>
-                <input type="password" id="confirm-password" for="confirm-password">
+                <fieldset class="input-row">
+                    <div class="input-group">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </fieldset>
+                <fieldset class="input-row">
+                    <div class="input-group">
+                        <label for="email">EMAIL</label>    
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="number" id="phone-number" name="phone-number" required>
+                    </div>
+                </fieldset>
+                <fieldset class="input-row">
+                    <div class="input-group">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" minlength="8" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-password" name="confirm-password" minlength="8" required>
+                    </div>
+                </fieldset>
             </form>
+            <button type="submit" class="create-account-btn">Create Account</button>
+            <p class="login-prompt">
+                Already have an account?
+                <a href="#" class="login-link">Log in</a>
+            </p>            
         </section>
     </section>
 </body>
